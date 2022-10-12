@@ -1,14 +1,14 @@
 const questions = [
-  "custard-apple",
-  "grapefruit",
-  "pineapple",
-  "cranberry",
-  "peach",
-  "strawberry",
-  "banana",
-  "kiwi",
-  "coconut",
-  "avocado",
+  "はなくそ",
+  "ごりら",
+  "あなる",
+  "こんばんは",
+  "わっさー",
+  "こんにちは",
+  "ばなな",
+  "とうきょうとっきょきょかっきょく",
+  "うんちぷり",
+  "へんたい！",
 ];
 const questionsNum = questions.length; // 問題の総数
 let num = 0;
@@ -31,7 +31,7 @@ document.addEventListener("keydown", keyDown);
 function keyDown(e) {
   // エンターキーが押された時
   if (e.key === "Enter") {
-    if (result.textContent == "[Enter] Game Start") {
+    if (result.textContent == "「Enter」を押してゲーム開始！") {
       result.textContent = `${questionsNum}/${questionsNum}`;
       setQuestion();
       move.play();
@@ -54,7 +54,7 @@ function keyDown(e) {
     }
     // 全ての問題をクリアした時の処理
     if (questions.length === 0) {
-      result.innerHTML = "Finish!! <span>[Enter]Restart Game</span>";
+      result.innerHTML = "終了！！ <span>「Enter」を押してゲーム開始！</span>";
       move.pause();
       gameEnd();
       return;
